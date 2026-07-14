@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: sakuta-md
+    env: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        sync: false
+      - key: TELEGRAM_OWNER_ID
+        sync: false
+      - key: BOT_NAME
+        value: 𝐒𝐀𝐊𝐔𝐓𝐀 𝐌𝐃
+      - key: NEWSLETTER_JID
+        value: 120363422843574549@newsletter
+      - key: OWNER_NUMBER
+        value: 50943046399
