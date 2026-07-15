@@ -331,7 +331,7 @@ async function handleMessageRevocation(socket, number) {
 
 async function resize(image, width, height) {
     let oyy = await Jimp.read(image);
-    let kiyomasa = await oyy.resize(width, height).getBufferAsync(Jimp.MIME_JPEG);
+    let kiyomasa = await oyy.resize({ w: width, h: height }).getBuffer('image/jpeg');
     return kiyomasa;
 }
 
